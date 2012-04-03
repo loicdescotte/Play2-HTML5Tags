@@ -1,7 +1,9 @@
 # HTML5 validation tags module for Play 2.0
 
-This tags add client side valdiation attributes (e.g required, max|min lentgh...). 
-This attributes are generared from the contraints defined on the model (e.g. "required" contraint on a field). 
+This tags add client side valdiation attributes (e.g required, max|min lentgh...).
+
+Attributes are generared from the contraints defined on the model (e.g. "required" contraint on a field). 
+
 They can generate several kinds all inputs : 
 
  * text
@@ -9,6 +11,7 @@ They can generate several kinds all inputs :
  * more to come (tel, date, range, color...)
 
 Examples :
-@text(form("name"), 'label -> "Your name : ")
-@number(form("age"), 'label -> "Your age : ")
+
+ * @text(form("name"), 'label -> "Your name : ")
+ * @number(form("age"), 'label -> "Your age : ")
 
