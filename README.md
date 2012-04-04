@@ -12,7 +12,7 @@ They can generate several kinds all inputs :
 
 Examples :
 
- * @text(form("name"), 'label -> "Your name : ")
+ * @text(form("author"), 'label -> "Your name : ")
  * @number(form("age"), 'label -> "Your age : ")
 
 If your model contains this :
