@@ -2,23 +2,24 @@
 
 This tags add client side validation attributes (e.g required, regex pattern, max|min lentgh...) and specific input fields (date, telephone number, color...) to Play 2.0 templates.
 
-Attributes are generared from the constraints defined on the model, e.g. `Required` or `Pattern` (regular expression) constraint on a field. 
+Attributes are generared from the constraints defined on the model, e.g. `Required` constraint on a field. 
 
 They can generate several kinds all inputs : 
 
  * text
- * number
- * tel, date, range, color... (coming soon)
+ * email (validates that it's an email pattern)
+ * tel (enables numeric keypad on mobile)
+ * number (enables numeric keyboard on mobile, and specific input on other browsers) 
+ * date, range, color... (coming soon)
 
 Examples :
 
  * @text(form("name"), 'label -> "Your name : ")
- * @number(form("age"), 'label -> "Your age : ")
+ * @number(form("age"), 'label -> "Your age : ") 
 
 If your model contains this :
 
     @Constraints.Required
-    @Constraints.Pattern("[A-Za-z]*")
     public String name;
     
     public Integer age;
