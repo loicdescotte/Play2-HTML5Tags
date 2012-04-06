@@ -2,7 +2,7 @@
 
 This tags add client side validation attributes (e.g required, max|min lentgh...) and specific input fields (date, telephone number, color...) to Play 2.0 templates.
 
-Attributes are generared from the constraints defined on the model, e.g. `@Required` or `Pattern` (regular expression) constraint on a field. 
+Attributes are generared from the constraints defined on the model, e.g. `Required` or `Pattern` (regular expression) constraint on a field. 
 
 They can generate several kinds all inputs : 
 
