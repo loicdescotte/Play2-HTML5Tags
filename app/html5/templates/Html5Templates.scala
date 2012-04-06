@@ -14,7 +14,7 @@ object Html5Templates {
 		//TODO extract method, use Option?		
         case "constraint.minLength" => out + Html(" minlength=\"" + constraint._2.head + "\"")
         case "constraint.maxLength" => out + Html(" maxlength=\"" + constraint._2.head + "\"")
-        case "constraint.pattern" => out + Html(" pattern=\"" + constraint._2.head + "\"")
+        //case "constraint.pattern" => out + Html(" pattern=\"" + constraint._2.head + "\"")
         case _ => ()
       })
     out
