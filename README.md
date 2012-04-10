@@ -32,3 +32,5 @@ If your model contains this :
     
 Then the browser will check that the `author` field is not empty and the `age` input is a number, before sending to server. 
 It will also limit the length of the `author` input.
+
+Note : you can check browsers compatibility for this new attributes [here] (http://wufoo.com/html5/)
