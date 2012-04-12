@@ -41,10 +41,12 @@ Note : you can check browsers compatibility for this new attributes [here] (http
 
 ## A few examples with pictures
 
-Email validation 
+Email validation :
+
 ![Image](http://wufoo.com/html5/images/email-supported-firefox4b12.png)
 
-Telephone number keyboard
+Telephone number keyboard :
+
 ![Image](http://wufoo.com/html5/images/tel-mobsafari-supported.png)
 
 ## How to install it
