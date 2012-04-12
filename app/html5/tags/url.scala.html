@@ -1,5 +1,5 @@
 @**
- * Generate an HTML input search field with HTML5 validation attributes
+ * Generate an HTML input url field with HTML5 validation attributes
  * The validation attributes are generated from the constraints defined on the model
  *@
 @(field: play.api.data.Field, args: (Symbol,Any)*)(implicit handler: views.html.helper.FieldConstructor, lang: play.api.i18n.Lang)
@@ -8,5 +8,5 @@
 @import views.html.helper._
 
 @input(field, args:_*) { (id, name, value, htmlArgs) =>
-    <input type="search" id="@id" name="@name" value="@value" @toHtmlArgs(htmlArgs) @Html5Templates.toValidation(field)>
+    <input type="url" id="@id" name="@name" value="@value" @toHtmlArgs(htmlArgs) @Html5Templates.toValidation(field)>
 }

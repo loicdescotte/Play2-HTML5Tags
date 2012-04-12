@@ -11,6 +11,7 @@ They can generate several kinds all inputs :
  * tel (enables numeric keypad on mobile)
  * number (enables numeric keyboard on mobile, and specific input on other browsers) 
  * date (enables date selection)
+ * url (validates that it's an url pattern)
  * search (enables special display for this kind of input)
  * range, color... (coming soon)
 
