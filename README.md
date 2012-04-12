@@ -10,7 +10,9 @@ They can generate several kinds all inputs :
  * email (validates that it's an email pattern)
  * tel (enables numeric keypad on mobile)
  * number (enables numeric keyboard on mobile, and specific input on other browsers) 
- * date, range, color... (coming soon)
+ * date (enables date selection)
+ * search (enables special display for this kind of input)
+ * range, color... (coming soon)
 
 Examples :
 
@@ -34,3 +36,22 @@ Then the browser will check that the `author` field is not empty and the `age` i
 It will also limit the length of the `author` input.
 
 Note : you can check browsers compatibility for this new attributes [here] (http://wufoo.com/html5/)
+
+
+## How to install it
+
+As the Play2 public module respository is not available yet, you will have to install it in your own repository.
+In the `Play2-HTML5Tags` folder, run `play`, then run `publish-local`.
+
+In your application, add this configuration to the `project/Build.scala` file :
+
+
+    val appDependencies = Seq(
+      "com.loicdescotte.coffeebean" % "html5tags_2.9.1" % "1.0-SNAPSHOT"
+    )
+
+    val main = PlayProject(appName, appVersion, appDependencies, mainLang = JAVA).settings(
+    	resolvers += "Local Play Repository" at "file://your-path-to-Play2/repository"
+    )
+
+	
