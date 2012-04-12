@@ -45,7 +45,7 @@ Email validation :
 
 ![Image](http://wufoo.com/html5/images/email-supported-firefox4b12.png)
 
-Telephone number keyboard :
+Telephone number keyboard (on Safari mobile) :
 
 ![Image](http://wufoo.com/html5/images/tel-mobsafari-supported.png)
 
