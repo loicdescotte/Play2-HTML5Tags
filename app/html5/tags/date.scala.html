@@ -8,5 +8,5 @@
 @import views.html.helper._
 
 @input(field, args:_*) { (id, name, value, htmlArgs) =>
-    <input type="number" id="@id" name="@name" value="@value" @toHtmlArgs(htmlArgs) @Html5Templates.toValidation(field)>
+    <input type="date" id="@id" name="@name" value="@value" @toHtmlArgs(htmlArgs) @Html5Templates.toValidation(field)>
 }
