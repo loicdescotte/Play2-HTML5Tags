@@ -13,7 +13,7 @@ They can generate several kinds all inputs :
  * date (enables date selection)
  * url (validates that it's an url pattern)
  * search (enables special display for this kind of input)
- * range, color... (coming soon)
+ * password 
 
 Examples :
 
