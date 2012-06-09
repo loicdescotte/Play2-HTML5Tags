@@ -1,6 +1,6 @@
 # HTML5 input tags module for Play 2.0
 
-This tags add client side validation attributes (e.g required, regex pattern, max length...) and specific input fields (date, telephone number, color...) to Play 2.0 templates.
+This tags add client side validation attributes (required, max|min length) and formats (date, number, email...) to Play 2.0 templates.
 
 Attributes are generared from the constraints defined on the model, e.g. `Required` constraint on a field. 
 
@@ -15,10 +15,12 @@ They can generate several kinds all inputs :
  * search (enables special display for this kind of input)
  * password 
 
-Examples :
+Example :
 
- * @text(form("name"), 'label -> "Your name : ")
- * @number(form("age"), 'label -> "Your age : ") 
+    @import html5.tags.html._
+
+    @text(form("name"), 'label -> "Your name : ")
+    @number(form("age"), 'label -> "Your age : ") 
 
 If your model contains this :
 
