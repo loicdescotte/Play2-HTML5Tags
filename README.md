@@ -4,7 +4,7 @@ This tags add client side validation attributes (required, max|min length) and f
 
 Attributes are generared from the constraints defined on the model, e.g. `Required` constraint on a field. 
 
-They can generate several kinds all inputs : 
+They can generate several kinds of input : 
 
  * text
  * email (validates that it's an email pattern)
