@@ -1,8 +1,27 @@
 package html5.templates
 
 import play.api.templates._
+import java.util._
 
 object Html5Templates {
+
+  /**
+   * Generates type attribute
+   */
+  def findType(value : Any, field: play.api.data.Field):Html = {
+    field.constraints.foreach(
+    	constraint => if(constraint._1.equals("constraint.email"))
+		return Html.empty + Html("email")
+    )
+    val out = Html.empty
+    value match {
+	//TODO other numeric types
+    	case _ : Int| _ : Long  => out + Html("number")
+    	case _ : Date  => out + Html("number")
+    	case _ => out + Html("text")
+    }	
+    out
+  }
   
   /**
    * Generates form validation attributes
