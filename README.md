@@ -38,6 +38,16 @@ If your model contains this :
 Then the browser will check that the `author` field is not empty and the `age` input is a number, before sending to server. 
 It will also limit the length of the `author` input.
 
+The `text` tag is able to change the input type if an email constraint is found on the model :
+
+    @Constraints.Email
+    public String contactMail;
+     
+The generated output will be :
+
+    <input type="email" id="contactMail" name="contactMail" value="">
+
+And the browser will check that the field contains an email address.
 Note : you can check browsers compatibility for this new attributes [here] (http://wufoo.com/html5/)
 
 
