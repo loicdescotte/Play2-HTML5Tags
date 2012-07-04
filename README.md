@@ -46,7 +46,7 @@ Using this model field :
      
 And this tag :
   
-   @text(form("contactMail"), 'label -> "Your mail : ")
+    @text(form("contactMail"), 'label -> "Your mail : ")
 
 The generated output will be :
 
