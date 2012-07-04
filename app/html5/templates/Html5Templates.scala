@@ -5,7 +5,10 @@ import java.util._
 
 object Html5Templates {
 
-  def findType(field: play.api.data.Field):Html = {
+ /**
+  * Find special types from field
+  */
+ def findType(field: play.api.data.Field):Html = {
    val out = Html.empty 
    field.constraints.foreach(constraint => 
 	if(constraint._1.equals("constraint.email"))
