@@ -10,7 +10,7 @@ object ApplicationBuild extends Build {
     val appDependencies = Seq(
     )
 
-    val main = PlayProject(appName, appVersion, appDependencies, mainLang = JAVA).settings(
+    val main = PlayProject(appName, appVersion, appDependencies, mainLang = SCALA).settings(
       organization := "com.loicdescotte.coffeebean"
     )
 }
