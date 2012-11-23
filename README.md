@@ -64,14 +64,14 @@ And the browser will check that the field contains an email address.
 
 Note : you can check browsers compatibility for this new attributes [here] (http://wufoo.com/html5/)
 
--## A few examples with pictures
+## A few examples with pictures
 
--Email validation :
--![Image](http://wufoo.com/html5/images/email-supported-firefox4b12.png)
+Email validation :
+![Image](http://wufoo.com/html5/images/email-supported-firefox4b12.png)
 
--Telephone number keyboard (on Safari mobile) :
+Telephone number keyboard (on Safari mobile) :
 
--![Image](http://wufoo.com/html5/images/tel-mobsafari-supported.png)
+![Image](http://wufoo.com/html5/images/tel-mobsafari-supported.png)
 
 ## How to install it
 
