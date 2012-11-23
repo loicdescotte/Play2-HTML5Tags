@@ -1,6 +1,9 @@
 # HTML5 input tags module for Play 2.0
 ## for Java and Scala
 
+![Image](http://wufoo.com/html5/images/email-supported-firefox4b12.png)
+![Image](http://wufoo.com/html5/images/tel-mobsafari-supported.png)
+
 This tags add client side validation attributes (required, max|min length) and formats (date, number, email...) to Play 2.0 templates.
 
 Attributes are generared from the constraints defined on the model, e.g. `Required` constraint on a field. 
@@ -63,17 +66,6 @@ The generated output will be :
 And the browser will check that the field contains an email address.
 
 Note : you can check browsers compatibility for this new attributes [here] (http://wufoo.com/html5/)
-
-
-## A few examples with pictures
-
-Email validation :
-
-![Image](http://wufoo.com/html5/images/email-supported-firefox4b12.png)
-
-Telephone number keyboard (on Safari mobile) :
-
-![Image](http://wufoo.com/html5/images/tel-mobsafari-supported.png)
 
 ## How to install it
 
