@@ -23,7 +23,14 @@ Example :
     @text(form("name"), 'label -> "Your name : ")
     @number(form("age"), 'label -> "Your age : ") 
 
-If your model contains this :
+If your form mapping is defined like this (Scala) 
+
+    mapping(          
+      "name" -> nonEmptyText(maxLength=10),
+      "age" -> number
+    )
+
+Or if your model contains this (Java) 
 
     @Constraints.Required
     @Constraints.MaxLength(10)
