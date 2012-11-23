@@ -1,9 +1,9 @@
 # HTML5 input tags module for Play 2.0
 ## for Java and Scala
 
-![Image](http://wufoo.com/html5/images/email-supported-firefox4b12.png)
-
 ![Image](http://wufoo.com/html5/images/tel-mobsafari-supported.png)
+
+![Image](http://wufoo.com/html5/images/email-supported-firefox4b12.png)
 
 This tags add client side validation attributes (required, max|min length) and formats (date, number, email...) to Play 2.0 templates.
 
