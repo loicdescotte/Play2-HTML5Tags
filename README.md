@@ -103,7 +103,7 @@ In your application, add this configuration to the `project/Build.scala` file :
 
 
     val appDependencies = Seq(
-      "com.loicdescotte.coffeebean" % "html5tags_2.9.1" % "1.0-RC1"
+      "com.loicdescotte.coffeebean" % "html5tags_2.10" % "1.0-RC1"
     )
 
 	
