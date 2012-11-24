@@ -27,6 +27,7 @@ object Html5Templates {
           case "constraint.required" => out + Html(" required")
           case "constraint.maxLength" => out + constraintValue("maxlength", constraint._2)
           case "constraint.minLength" => out + Html(" pattern=\".{" + constraint._2.head + ",}\"")
+          case "constraint.pattern" => out + constraintValue("pattern", constraint._2)
           case _ => ()
        })
       out
