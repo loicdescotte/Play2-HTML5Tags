@@ -5,7 +5,7 @@ import PlayProject._
 object ApplicationBuild extends Build {
 
     val appName         = "html5Tags"
-    val appVersion      = "1.0"
+    val appVersion      = "1.0-RC1"
 
     val appDependencies = Seq(
     )
