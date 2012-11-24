@@ -103,11 +103,7 @@ In your application, add this configuration to the `project/Build.scala` file :
 
 
     val appDependencies = Seq(
-      "com.loicdescotte.coffeebean" % "html5tags_2.9.1" % "1.0-SNAPSHOT"
-    )
-
-    val main = PlayProject(appName, appVersion, appDependencies, mainLang = JAVA).settings(
-    	resolvers += "Local Play Repository" at "file://your-path-to-Play2/repository"
+      "com.loicdescotte.coffeebean" % "html5tags_2.9.1" % "1.0-RC1"
     )
 
 	
