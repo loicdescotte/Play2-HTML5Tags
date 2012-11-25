@@ -1,9 +1,9 @@
-# HTML5 input tags module for Play 2.0
+# HTML5 input tags module for Play 2
 ## for Java and Scala
 
-This tags add client side validation attributes (required, max|min length...) and formats (date, number, email...) to Play 2.0 templates.
+This tags add client side validation attributes (required, max|min length) and formats (date, number, email...) to Play 2.0 templates.
 
-Attributes are generared from the constraints defined on the model, e.g. `Required` constraint on a field. 
+Attributes are generared from the constraints defined in the model or in a form mapping. 
 
 They can generate several kinds of input : 
 
@@ -89,10 +89,9 @@ You can use the following tags :
 
 And the following constraint values on models/mappings :
 
- * required
+ * required (or nonEmpty or nonEmptyText)
  * maxLength
  * minLength
- * pattern (regexp)
 
 ## How to install it
 
@@ -103,11 +102,7 @@ In your application, add this configuration to the `project/Build.scala` file :
 
 
     val appDependencies = Seq(
-      "com.loicdescotte.coffeebean" % "html5tags_2.9.1" % "1.0-SNAPSHOT"
-    )
-
-    val main = PlayProject(appName, appVersion, appDependencies, mainLang = JAVA).settings(
-    	resolvers += "Local Play Repository" at "file://your-path-to-Play2/repository"
+      "com.loicdescotte.coffeebean" % "html5tags_2.10" % "1.0-RC1"
     )
 
 	
