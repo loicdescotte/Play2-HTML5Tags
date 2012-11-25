@@ -1,7 +1,7 @@
 # HTML5 input tags module for Play 2
 ## for Java and Scala
 
-This tags add client side validation attributes and formats to Play 2 templates.
+This tags add client side validation attributes (required, max|min length, ...) and formats (date, number, email, ...) to Play 2.0 templates.
 
 Attributes are generared from the constraints defined in the model or in a form mapping. 
 
@@ -47,22 +47,6 @@ Or if your model contains this (Java)
 Then the browser will check that the `name` field is not empty and the `age` input is a number, before sending to server. 
 It will also limit the length of the `name` input.
 
-The `text` tag is able to change the input type if an email constraint is found on the model.
-Using this model field :
-
-    @Constraints.Email
-    public String contactMail;
-     
-And this tag :
-  
-    @text(form("contactMail"), 'label -> "Your mail : ")
-
-The generated output will be :
-
-    <input type="email" id="contactMail" name="contactMail" value="">
-
-And the browser will check that the field contains an email address.
-
 Note : you can check browsers compatibility for this new attributes [here] (http://wufoo.com/html5/)
 
 ## A few examples with pictures
@@ -93,7 +77,31 @@ And the following constraint values on models/mappings :
  * required (or nonEmpty or nonEmptyText)
  * maxLength
  * minLength
+ * max
+ * min
  * pattern
+
+
+## Tricks
+
+The `text` tag is able to change the input type if a specific format is detected.
+
+For example, using the email constraint :
+
+    @Constraints.Email
+    public String contactMail;
+     
+And this tag :
+  
+    @text(form("contactMail"), 'label -> "Your mail : ")
+
+The generated output will be :
+
+    <input type="email" id="contactMail" name="contactMail" value="">
+
+And the browser will check that the field contains an email address.
+
+The same trick is working with numbers if you use max/min constraints.
 
 ## How to install it
 

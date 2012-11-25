@@ -12,8 +12,8 @@ object Html5Templates {
  def findType(field: play.api.data.Field): Html = {
    val out = Html.empty 
    field.constraints.foreach(constraint => 
-	 if(constraint._1.equals("constraint.email"))
-	   return Html("email")
+  	 if(constraint._1.equals("constraint.email")) return Html("email")
+     else if(constraint._1.equals("constraint.max")||constraint._1.equals("constraint.max")) return Html("number")
    )
    Html("text")
   }
@@ -26,6 +26,8 @@ object Html5Templates {
     field.constraints.foreach(constraint => 
       constraint._1 match {
           case "constraint.required" => out + Html(" required")
+          case "constraint.max" => out + constraintValue("max", constraint._2.headOption)
+          case "constraint.min" => out + constraintValue("min", constraint._2.headOption)
           case "constraint.maxLength" => out + constraintValue("maxlength", constraint._2.headOption)
           case "constraint.minLength" => out + constraint._2.headOption.map(value => Html(" pattern=\".{" + value + ",}\"")).getOrElse(Html.empty)
           case "constraint.pattern" => out + (constraint._2.headOption.map(value => value match {
