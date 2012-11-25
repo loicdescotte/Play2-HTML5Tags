@@ -89,7 +89,7 @@ You can use the following tags :
 
 And the following constraint values on models/mappings :
 
- * required (or nonEmptyText)
+ * required (or nonEmpty or nonEmptyText)
  * maxLength
  * minLength
 
