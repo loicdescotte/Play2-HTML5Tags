@@ -1,7 +1,7 @@
 # HTML5 input tags module for Play 2
 ## for Java and Scala
 
-This tags add client side validation attributes (required, max|min length) and formats (date, number, email...) to Play 2.0 templates.
+This tags add client side validation attributes and formats to Play 2 templates.
 
 Attributes are generared from the constraints defined in the model or in a form mapping. 
 
@@ -15,6 +15,7 @@ They can generate several kinds of input :
  * url (validates that it's an url pattern)
  * search (enables special display for this kind of input)
  * password 
+ * custom formats (using regular expression patterns)
 
 Example :
 
@@ -92,6 +93,7 @@ And the following constraint values on models/mappings :
  * required (or nonEmpty or nonEmptyText)
  * maxLength
  * minLength
+ * pattern
 
 ## How to install it
 
