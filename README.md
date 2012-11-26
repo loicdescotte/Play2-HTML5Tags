@@ -105,14 +105,15 @@ The same trick is working with numbers if you use max/min constraints.
 
 ## How to install it
 
-As the Play2 public module respository is not available yet, you will have to install it in your own repository.
-In the `Play2-HTML5Tags` folder, run `play`, then run `publish-local`.
-
 In your application, add this configuration to the `project/Build.scala` file :
 
 
     val appDependencies = Seq(
       "com.loicdescotte.coffeebean" % "html5tags_2.10" % "1.0-RC1"
+    )
+
+     val main = play.Project(appName, appVersion, appDependencies).settings(
+      resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.com/releases/"))(Resolver.ivyStylePatterns)
     )
 
 	
