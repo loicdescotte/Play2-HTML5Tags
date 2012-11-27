@@ -81,9 +81,6 @@ And the following constraint values on models/mappings :
  * min
  * pattern
 
-    Important note : as 'minLength' does not exist in HTML5 specification, a regular expression pattern will be used to simulate it. 
-    If you need both 'minLength' and 'pattern' on a field, write the min length constraint directly in your regex pattern (e.g. add '{2,}' to your pattern for minLength=2)
-
 ## Magic tag
 
 The `text` tag is able to change the input type if a specific format is detected.
@@ -104,6 +101,17 @@ The generated output will be :
 And the browser will check that the field contains an email address.
 
 The same trick is working with `number` input type if you use max/min constraints.
+
+## Important notes
+  
+  ## MinLength behaviour
+
+  As 'minLength' does not exist in HTML5 specification, a regular expression pattern will be used to simulate it. 
+  If you need both 'minLength' and 'pattern' on a field, write the min length constraint directly in your regex pattern (e.g. add '{2,}' to your pattern for minLength=2)
+
+  ## Browser regex patterns
+
+  You can check pattern compatibility with Javascript regular expressions (used by browsers) here : [here] (http://regexpal.com/) (check the 'Dot matches all') option.
 
 ## How to install it
 
