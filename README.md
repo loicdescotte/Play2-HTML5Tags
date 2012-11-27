@@ -81,10 +81,10 @@ And the following constraint values on models/mappings :
  * min
  * pattern
 
-  Important note : as 'minLength' does not exist in HTML5 specification, a regular expression pattern will be used to simulate it. 
-  If you need both 'minLength' and 'pattern' on a field, write the min length constraint directly in your regex pattern (e.g. add '.{2,}' to your pattern for minLength=2)
+    Important note : as 'minLength' does not exist in HTML5 specification, a regular expression pattern will be used to simulate it. 
+    If you need both 'minLength' and 'pattern' on a field, write the min length constraint directly in your regex pattern (e.g. add '.{2,}' to your pattern for minLength=2)
 
-## Tricks
+## Magic tags
 
 The `text` tag is able to change the input type if a specific format is detected.
 
