@@ -111,7 +111,7 @@ The same trick is working with `number` input type if you use max/min constraint
 
 ### Browser regex patterns
 
-  You can check pattern compatibility with Javascript regular expressions (used by browsers) here : [here] (http://regexpal.com/) (check the 'Dot matches all') option.
+  You can check pattern compatibility with Javascript regular expressions (used by browsers) [here] (http://regexpal.com/) (check the 'Dot matches all') option.
 
 ## How to install it
 
