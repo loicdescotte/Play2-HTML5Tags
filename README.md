@@ -47,7 +47,7 @@ Or if your model contains this (Java)
 Then the browser will check that the `name` field is not empty and the `age` input is a number, before sending to server. 
 It will also limit the length of the `name` input.
 
-Note : you can check browsers compatibility for this new attributes [here] (http://wufoo.com/html5/)
+Note : you can check browsers compatibility for this new attributes on [wufoo] (http://wufoo.com/html5/)
 
 ## A few examples with pictures
 
@@ -106,12 +106,12 @@ The same trick is working with `number` input type if you use max/min constraint
   
 ### MinLength behaviour
 
-  As 'minLength' does not exist in HTML5 specification, a regular expression pattern will be used to simulate it. 
-  If you need both 'minLength' and 'pattern' on a field, write the min length constraint directly in your regex pattern (e.g. add '{2,}' to your pattern for minLength=2)
+  As `minLength` does not exist in HTML5 specification, a regular expression pattern will be used to simulate it. 
+  If you need both 'minLength' and 'pattern' on a field, write the min length constraint directly in your regex pattern. Example : add `{2,}` to your pattern for minLength=2.
 
 ### Browser regex patterns
 
-  You can check pattern compatibility with Javascript regular expressions (used by browsers) [here] (http://regexpal.com/) (check the 'Dot matches all') option.
+  You can check pattern compatibility with Javascript regular expressions (used by browsers) on [regexpal] (http://regexpal.com/) (check the 'Dot matches all') option.
 
 ## How to install it
 
