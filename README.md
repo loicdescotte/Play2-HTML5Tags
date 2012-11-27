@@ -81,6 +81,8 @@ And the following constraint values on models/mappings :
  * min
  * pattern
 
+  Important note : as 'minLength' does not exist in HTML5 specification, a regular expression pattern will be used to simulate it. 
+  If you need both 'minLength' and 'pattern' on a field, write the min length constraint directly in your regex pattern (e.g. add '.{2,}' to your pattern for minLength=2)
 
 ## Tricks
 
@@ -109,10 +111,12 @@ In your application, add this configuration to the `project/Build.scala` file :
 
 
     val appDependencies = Seq(
+      //your dependencies
       "com.loicdescotte.coffeebean" % "html5tags_2.10" % "1.0-RC1"
     )
 
      val main = play.Project(appName, appVersion, appDependencies).settings(
+      //your settings
       resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.com/releases/"))(Resolver.ivyStylePatterns)
     )
 

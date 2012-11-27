@@ -1,0 +1,16 @@
+@(contactForm: Form[Contact])
+
+@import helper._
+@import html5.tags.html._
+
+@main("Form test") {
+
+     @form(routes.Application.save()) {      
+		@text(contactForm("name"), 'label -> "Name : ")
+	    @text(contactForm("email"), 'label -> "Email : ")
+	    @text(contactForm("age"), 'label -> "Age : ")
+	    @password(contactForm("password"), 'label -> "Password : ")
+	    <input type="submit" value="OK">
+    }
+    
+}
