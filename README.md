@@ -127,5 +127,7 @@ In your application, add this configuration to the `project/Build.scala` file :
       //your settings
       resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.com/releases/"))(Resolver.ivyStylePatterns)
     )
-
 	
+
+## License
+This project is published under the Apache License v2.0
