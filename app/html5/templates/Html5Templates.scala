@@ -13,7 +13,7 @@ object Html5Templates {
    val out = Html.empty 
    field.constraints.foreach(constraint => 
   	 if(constraint._1.equals("constraint.email")) return Html("email")
-     else if(constraint._1.equals("constraint.max")||constraint._1.equals("constraint.max")) return Html("number")
+     else if(constraint._1.equals("constraint.min")||constraint._1.equals("constraint.max")) return Html("number")
    )
    Html("text")
   }
