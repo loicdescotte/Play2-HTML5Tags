@@ -5,7 +5,10 @@ This module brings client side validation attributes (required, max|min length, 
 
 The provided tags can also display forms with special input controls, like a numeric keypad to enter numbers on a smartphone.
 
-Attributes are generated from the constraints defined in the model or in a form mapping. 
+## Getting started
+
+Attributes are generated from the constraints defined in the model or in a form mapping.
+
 They can generate several kinds of input : 
 
  * text
