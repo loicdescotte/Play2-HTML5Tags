@@ -1,9 +1,10 @@
 # HTML5 input tags module for Play 2
 ## for Java and Scala
 
-This tags add client side validation attributes (required, max|min length, ...) and formats (date, number, email, ...) to Play 2 templates.
+This module brings client side validation attributes (required, max|min length, ...) and formats (date, number, email, ...) to Play 2 templates.
+The provided tags can also display forms with special input controls, like a numeric keypad to enter numbers on a smartphone.
 
-Attributes are generared from the constraints defined in the model or in a form mapping. 
+Attributes are generated from the constraints defined in the model or in a form mapping. 
 
 They can generate several kinds of input : 
 
@@ -11,7 +12,7 @@ They can generate several kinds of input :
  * email (validates that it's an email pattern)
  * tel (enables numeric keypad on mobile)
  * number (enables numeric keyboard on mobile, and specific input on other browsers) 
- * date (enables date selection)
+ * date (enables date selection - through a calendar on compatible browsers)
  * url (validates that it's an url pattern)
  * search (enables special display for this kind of input)
  * password 
@@ -59,7 +60,7 @@ Telephone number keyboard (on Safari mobile) :
 
 ![Image](http://wufoo.com/html5/images/tel-mobsafari-supported.png)
 
-## Avalaible tags and formats
+## Available tags and formats
 
 You can use the following tags : 
 
@@ -104,7 +105,7 @@ The same trick is working with `number` input type if you use max/min constraint
 
 ## Important notes
   
-### MinLength behaviour
+### MinLength behavior
 
   As `minLength` does not exist in HTML5 specification, a regular expression pattern will be used to simulate it. 
   If you need both 'minLength' and 'pattern' on a field, write the min length constraint directly in your regex pattern. Example : add `{2,}` to your pattern for minLength=2.
