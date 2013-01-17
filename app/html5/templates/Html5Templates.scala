@@ -25,12 +25,12 @@ object Html5Templates {
     val out = Html.empty
     field.constraints.foreach(constraint => 
       constraint._1 match {
-          case "constraint.required" => out + Html(" required")
-          case "constraint.max" => out + constraintValue("max", constraint._2.headOption)
-          case "constraint.min" => out + constraintValue("min", constraint._2.headOption)
-          case "constraint.maxLength" => out + constraintValue("maxlength", constraint._2.headOption)
-          case "constraint.minLength" => out + constraint._2.headOption.map(value => Html(" pattern=\".{" + value + ",}\"")).getOrElse(Html.empty)
-          case "constraint.pattern" => out + (constraint._2.headOption.map(value => value match {
+          case "constraint.required" => out += Html(" required")
+          case "constraint.max" => out += constraintValue("max", constraint._2.headOption)
+          case "constraint.min" => out += constraintValue("min", constraint._2.headOption)
+          case "constraint.maxLength" => out += constraintValue("maxlength", constraint._2.headOption)
+          case "constraint.minLength" => out += constraint._2.headOption.map(value => Html(" pattern=\".{" + value + ",}\"")).getOrElse(Html.empty)
+          case "constraint.pattern" => out += (constraint._2.headOption.map(value => value match {
             //for scala pattern
             case f: Function0[Any] => constraintValue("pattern", Option(f.apply().toString))
             //for java @Pattern
