@@ -131,7 +131,7 @@ In your application, add this configuration to the `project/Build.scala` file :
       resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.com/releases/"))(Resolver.ivyStylePatterns)
     )
 	
-Note : for Play 2.0.x, use `"com.loicdescotte.coffeebean" % "html5tags_2.9.1" % "1.0-beta"`
+Note : for Play 2.0.x, use `"com.loicdescotte.coffeebean" % "html5tags_2.9.1" % "1.0-beta"` dependency.
 
 ## License
 
