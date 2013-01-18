@@ -83,7 +83,7 @@ And the following constraint values on models/mappings :
  * minLength
  * max
  * min
- * pattern
+ * pattern (Play 2.1(+) required)
 
 ## Magic tag
 
@@ -121,7 +121,6 @@ The same trick is working with `number` input type if you use max/min constraint
 
 In your application, add this configuration to the `project/Build.scala` file :
 
-
     val appDependencies = Seq(
       //your dependencies
       "com.loicdescotte.coffeebean" % "html5tags_2.10" % "1.0-RC2"
@@ -132,6 +131,7 @@ In your application, add this configuration to the `project/Build.scala` file :
       resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.com/releases/"))(Resolver.ivyStylePatterns)
     )
 	
+Note : for Play 2.0.x, use `"html5tags_2.9" % "1.0-beta"`
 
 ## License
 
