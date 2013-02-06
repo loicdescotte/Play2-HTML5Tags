@@ -9,7 +9,7 @@ object ApplicationBuild extends Build {
 
   val appDependencies = Seq(
     javaCore,
-    "com.loicdescotte.coffeebean" % "html5tags_2.10" % "1.0-RC2"
+    "com.loicdescotte.coffeebean" % "html5tags_2.10" % "1.0"
   )
 
  val main = play.Project(appName, appVersion, appDependencies).settings(
