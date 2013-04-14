@@ -5,11 +5,7 @@ This module brings client side validation attributes (required, max|min length, 
 
 The provided tags can also display forms with special input controls, like a numeric keypad to enter numbers on a smartphone.
 
-## Getting started
-
-Attributes are generated from the constraints defined in the model or in a form mapping.
-
-They can generate several kinds of input : 
+Attributes are generated from the constraints defined in the model or in a form mapping. They can generate several kinds of input : 
 
  * text
  * email (validates that it's an email pattern)
@@ -21,32 +17,60 @@ They can generate several kinds of input :
  * password 
  * custom formats (using regular expression patterns)
 
-Example :
+## How to install it
 
-    @import html5.tags.html._
+In your application, add this configuration to the `project/Build.scala` file :
 
-    @text(form("name"), 'label -> "Your name : ")
-    @number(form("age"), 'label -> "Your age : ") 
+```scala
+val appDependencies = Seq(
+  //your dependencies
+  "com.loicdescotte.coffeebean" % "html5tags_2.10" % "1.0"
+)
+
+val main = play.Project(appName, appVersion, appDependencies).settings(
+  //your settings
+  resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.com/releases/"))(Resolver.ivyStylePatterns)
+)
+```
+  
+Note : for Play 2.0.x, use `"com.loicdescotte.coffeebean" % "html5tags_2.9.1" % "1.0-beta"` dependency.
+
+## Code examples
+
+With this view template : 
+
+```scala
+@import html5.tags.html._
+
+@text(form("name"), 'label -> "Your name : ")
+@number(form("age"), 'label -> "Your age : ") 
+```
 
 If your form mapping is defined like this (Scala) :
 
-    mapping(          
-      "name" -> nonEmptyText(maxLength=10),
-      "age" -> number
-    )
+```scala
+mapping(          
+  "name" -> nonEmptyText(maxLength=10),
+  "age" -> number
+)
+```
 
 Or if your model contains this (Java) :
 
-    @Constraints.Required
-    @Constraints.MaxLength(10)
-    public String name;
-    
-    public Integer age;
+```java
+@Constraints.Required
+@Constraints.MaxLength(10)
+public String name;
+
+public Integer age;
+```
  
- The generated output will be : 
+The generated output will be : 
  
-    <input type="text" id="name" name="name" value="" label="Your name : " required maxlength="10">
-    <input type="number" id="age" name="age" value="" label="Your age : ">
+```html 
+<input type="text" id="name" name="name" value="" label="Your name : " required maxlength="10">
+<input type="number" id="age" name="age" value="" label="Your age : ">
+```
     
 Then the browser will check that the `name` field is not empty and the `age` input is a number, before sending to server. 
 It will also limit the length of the `name` input.
@@ -115,23 +139,7 @@ The same trick is working with `number` input type if you use max/min constraint
 
 ### Browser regex patterns
 
-  You can check pattern compatibility with Javascript regular expressions (used by browsers) on [regexpal] (http://regexpal.com/) (check the 'Dot matches all') option.
-
-## How to install it
-
-In your application, add this configuration to the `project/Build.scala` file :
-
-    val appDependencies = Seq(
-      //your dependencies
-      "com.loicdescotte.coffeebean" % "html5tags_2.10" % "1.0"
-    )
-
-     val main = play.Project(appName, appVersion, appDependencies).settings(
-      //your settings
-      resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.com/releases/"))(Resolver.ivyStylePatterns)
-    )
-	
-Note : for Play 2.0.x, use `"com.loicdescotte.coffeebean" % "html5tags_2.9.1" % "1.0-beta"` dependency.
+  You can check pattern compatibility with Javascript regular expressions (used by browsers) on [regexpal] (http://regexpal.com/) (check the 'Dot matches all' option).
 
 ## License
 
