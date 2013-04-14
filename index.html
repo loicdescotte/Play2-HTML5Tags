@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Play2 Html5 Tags</title>
+    <title>Play2-html5tags</title>
   </head>
 
   <body>
@@ -18,8 +18,8 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/loicdescotte/Play2-HTML5Tags">View on GitHub</a>
 
-          <h1 id="project_title">Play2 HTML5 Tags</h1>
-          <h2 id="project_tagline">HTML5 input tags module for Play Framework</h2>
+          <h1 id="project_title">Play2-html5tags</h1>
+          <h2 id="project_tagline">HTML5 input tags module for Play 2.0</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/loicdescotte/Play2-HTML5Tags/zipball/master">Download this project as a .zip file</a>
@@ -39,11 +39,7 @@
 
 <p>The provided tags can also display forms with special input controls, like a numeric keypad to enter numbers on a smartphone.</p>
 
-<h2>Getting started</h2>
-
-<p>Attributes are generated from the constraints defined in the model or in a form mapping.</p>
-
-<p>They can generate several kinds of input : </p>
+<p>Attributes are generated from the constraints defined in the model or in a form mapping. They can generate several kinds of input : </p>
 
 <ul>
 <li>text</li>
@@ -55,36 +51,55 @@
 <li>search (enables special display for this kind of input)</li>
 <li>password </li>
 <li>custom formats (using regular expression patterns)</li>
-</ul><p>Example :</p>
+</ul><h2>How to install it</h2>
 
-<pre><code>@import html5.tags.html._
+<p>In your application, add this configuration to the <code>project/Build.scala</code> file :</p>
 
-@text(form("name"), 'label -&gt; "Your name : ")
-@number(form("age"), 'label -&gt; "Your age : ") 
-</code></pre>
+<div class="highlight"><pre><span class="k">val</span> <span class="n">appDependencies</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span>
+  <span class="c1">//your dependencies</span>
+  <span class="s">"com.loicdescotte.coffeebean"</span> <span class="o">%</span> <span class="s">"html5tags_2.10"</span> <span class="o">%</span> <span class="s">"1.0"</span>
+<span class="o">)</span>
+
+<span class="k">val</span> <span class="n">main</span> <span class="k">=</span> <span class="n">play</span><span class="o">.</span><span class="nc">Project</span><span class="o">(</span><span class="n">appName</span><span class="o">,</span> <span class="n">appVersion</span><span class="o">,</span> <span class="n">appDependencies</span><span class="o">).</span><span class="n">settings</span><span class="o">(</span>
+  <span class="c1">//your settings</span>
+  <span class="n">resolvers</span> <span class="o">+=</span> <span class="nc">Resolver</span><span class="o">.</span><span class="n">url</span><span class="o">(</span><span class="s">"github repo for html5tags"</span><span class="o">,</span> <span class="n">url</span><span class="o">(</span><span class="s">"http://loicdescotte.github.com/releases/"</span><span class="o">))(</span><span class="nc">Resolver</span><span class="o">.</span><span class="n">ivyStylePatterns</span><span class="o">)</span>
+<span class="o">)</span>
+</pre></div>
+
+<p>Note : for Play 2.0.x, use <code>"com.loicdescotte.coffeebean" % "html5tags_2.9.1" % "1.0-beta"</code> dependency.</p>
+
+<h2>Code examples</h2>
+
+<p>With this view template : </p>
+
+<div class="highlight"><pre><span class="nd">@import</span> <span class="n">html5</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="k">_</span>
+
+<span class="nd">@text</span><span class="o">(</span><span class="n">form</span><span class="o">(</span><span class="s">"name"</span><span class="o">),</span> <span class="-Symbol">'label</span> <span class="o">-&gt;</span> <span class="s">"Your name : "</span><span class="o">)</span>
+<span class="nd">@number</span><span class="o">(</span><span class="n">form</span><span class="o">(</span><span class="s">"age"</span><span class="o">),</span> <span class="-Symbol">'label</span> <span class="o">-&gt;</span> <span class="s">"Your age : "</span><span class="o">)</span> 
+</pre></div>
 
 <p>If your form mapping is defined like this (Scala) :</p>
 
-<pre><code>mapping(          
-  "name" -&gt; nonEmptyText(maxLength=10),
-  "age" -&gt; number
-)
-</code></pre>
+<div class="highlight"><pre><span class="n">mapping</span><span class="o">(</span>          
+  <span class="s">"name"</span> <span class="o">-&gt;</span> <span class="n">nonEmptyText</span><span class="o">(</span><span class="n">maxLength</span><span class="k">=</span><span class="mi">10</span><span class="o">),</span>
+  <span class="s">"age"</span> <span class="o">-&gt;</span> <span class="n">number</span>
+<span class="o">)</span>
+</pre></div>
 
 <p>Or if your model contains this (Java) :</p>
 
-<pre><code>@Constraints.Required
-@Constraints.MaxLength(10)
-public String name;
+<div class="highlight"><pre><span class="nd">@Constraints.Required</span>
+<span class="nd">@Constraints.MaxLength</span><span class="o">(</span><span class="mi">10</span><span class="o">)</span>
+<span class="kd">public</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
 
-public Integer age;
-</code></pre>
+<span class="kd">public</span> <span class="n">Integer</span> <span class="n">age</span><span class="o">;</span>
+</pre></div>
 
 <p>The generated output will be : </p>
 
-<pre><code>&lt;input type="text" id="name" name="name" value="" label="Your name : " required maxlength="10"&gt;
-&lt;input type="number" id="age" name="age" value="" label="Your age : "&gt;
-</code></pre>
+<div class="highlight"><pre><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"name"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">label=</span><span class="s">"Your name : "</span> <span class="na">required</span> <span class="na">maxlength=</span><span class="s">"10"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">id=</span><span class="s">"age"</span> <span class="na">name=</span><span class="s">"age"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">label=</span><span class="s">"Your age : "</span><span class="nt">&gt;</span>
+</pre></div>
 
 <p>Then the browser will check that the <code>name</code> field is not empty and the <code>age</code> input is a number, before sending to server. 
 It will also limit the length of the <code>name</code> input.</p>
@@ -95,28 +110,27 @@ It will also limit the length of the <code>name</code> input.</p>
 
 <p>Email validation :</p>
 
-<p><img src="http://wufoo.com/html5/images/email-supported-firefox4b12.png" alt="Image" width="241" height="109"></p>
+<p><img src="http://wufoo.com/html5/images/email-supported-firefox4b12.png" alt="Image"></p>
 
 <p>Telephone number keyboard (on Safari mobile) :</p>
 
-<p><img src="http://wufoo.com/html5/images/tel-mobsafari-supported.png" alt="Image" width="155" height="104"></p>
+<p><img src="http://wufoo.com/html5/images/tel-mobsafari-supported.png" alt="Image"></p>
 
 <h2>Available tags and formats</h2>
 
 <p>You can use the following tags : </p>
 
 <ul>
-<li>@date</li>
-<li>@email</li>
-<li>@number</li>
-<li>@password</li>
-<li>@search</li>
-<li>@tel</li>
-<li>@text</li>
-<li>@url</li>
-</ul>
+<li><code>@date</code></li>
+<li><code>@email</code></li>
+<li><code>@number</code></li>
+<li><code>@password</code></li>
+<li><code>@search</code></li>
+<li><code>@tel</code></li>
+<li><code>@text</code></li>
+<li><code>@url</code></li>
+</ul><p>And the following constraint values on models/mappings :</p>
 
-<p>And the following constraint values on models/mappings :</p>
 <ul>
 <li>required (or nonEmpty or nonEmptyText)</li>
 <li>maxLength</li>
@@ -158,23 +172,6 @@ public String contactMail;
 <h3>Browser regex patterns</h3>
 
 <p>You can check pattern compatibility with Javascript regular expressions (used by browsers) on <a href="http://regexpal.com/">regexpal</a> (check the 'Dot matches all') option.</p>
-
-<h2>How to install it</h2>
-
-<p>In your application, add this configuration to the <code>project/Build.scala</code> file :</p>
-
-<pre><code>val appDependencies = Seq(
-  //your dependencies
-  "com.loicdescotte.coffeebean" % "html5tags_2.10" % "1.0"
-)
-
- val main = play.Project(appName, appVersion, appDependencies).settings(
-  //your settings
-  resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.com/releases/"))(Resolver.ivyStylePatterns)
-)
-</code></pre>
-
-<p>Note : for Play 2.0.x, use <code>"com.loicdescotte.coffeebean" % "html5tags_2.9.1" % "1.0-beta"</code> dependency.</p>
 
 <h2>License</h2>
 
