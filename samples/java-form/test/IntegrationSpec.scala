@@ -21,6 +21,7 @@ import org.fluentlenium.core.filter.FilterConstructor._
  				browser.$("form input", withName("name")).first.getAttribute("required") must equalTo("true")
  				browser.$("form input", withName("name")).first.getAttribute("pattern") must equalTo(".{2,}")
  				browser.$("form input", withName("name")).first.getAttribute("maxLength") must equalTo("10")
+ 				browser.$("form input", withName("name")).first.getAttribute("toto") must equalTo("titi")
 
  				browser.$("form input", withName("email")).first.getAttribute("required") must equalTo("true")
  				browser.$("form input", withName("email")).first.getAttribute("type") must equalTo("email")
