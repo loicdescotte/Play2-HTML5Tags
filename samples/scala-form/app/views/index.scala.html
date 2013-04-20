@@ -6,10 +6,10 @@
 @main("Form test") {
 
      @form(routes.Application.save()) {      
-		@text(contactForm("name"), 'label -> "Name : ", 'toto -> "titi")
-	    @text(contactForm("email"), 'label -> "Email : ")
-	    @text(contactForm("age"), 'label -> "Age : ")
-	    @password(contactForm("password"), 'label -> "Password : ")
+		@text(contactForm("name"), '_label -> "Name : ", 'toto -> "titi")
+	    @text(contactForm("email"), '_label -> "Email : ")
+	    @text(contactForm("age"), '_label -> "Age : ")
+	    @password(contactForm("password"), '_label -> "Password : ")
 	    <input type="submit" value="OK">
     }
     
