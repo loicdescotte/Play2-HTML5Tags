@@ -96,8 +96,10 @@ You can use the following tags :
  * @number
  * @password
  * @search
+ * @select
  * @tel
  * @text
+ * @textarea
  * @url
 
 And the following constraint values on models/mappings :
