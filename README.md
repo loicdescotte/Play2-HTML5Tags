@@ -25,12 +25,12 @@ In your application, add this configuration to the `project/Build.scala` file :
 ```scala
 val appDependencies = Seq(
   //your dependencies
-  "com.loicdescotte.coffeebean" % "html5tags_2.10" % "1.0"
+  "com.loicdescotte.coffeebean" % "html5tags_2.10" % "1.1.0"
 )
 
 val main = play.Project(appName, appVersion, appDependencies).settings(
   //your settings
-  resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.com/releases/"))(Resolver.ivyStylePatterns)
+  resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.io/releases/"))(Resolver.ivyStylePatterns)
 )
 ```
   
