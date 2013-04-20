@@ -13,7 +13,7 @@ public class Contact {
     @MaxLength(10)
     public String name;
 
-	@Required @Email
+    @Required @Email
     public String email;
 
     @Min(18)

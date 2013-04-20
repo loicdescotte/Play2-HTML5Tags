@@ -5,7 +5,7 @@
 @main("Form test") {
 
      @form(routes.Application.save()) {      
-		@text(contactForm("name"), '_label -> "Name : ", 'toto -> "titi")
+	    @text(contactForm("name"), '_label -> "Name : ", 'toto -> "titi")
 	    @text(contactForm("email"), '_label -> "Email : ")
 	    @text(contactForm("age"), '_label -> "Age : ")
 	    @select(
