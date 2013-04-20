@@ -1,0 +1,23 @@
+@**
+ * Generate an HTML input checkbox.
+ *
+ * Example:
+ * {{{
+ * @checkbox(field = myForm("done"))
+ * }}}
+ *
+ * @param field The form field.
+ * @param args Set of extra HTML attributes ('''id''' and '''label''' are 2 special arguments).
+ * @param handler The field constructor.
+ *@
+@(field: play.api.data.Field, args: (Symbol,Any)*)(implicit handler: views.html.helper.FieldConstructor, lang: play.api.i18n.Lang)
+
+@import html5.templates._
+@import views.html.helper._
+
+@boxValue = @{ args.toMap.get('value).getOrElse("true") }
+
+@input(field, args:_*) { (id, name, value, htmlArgs) =>
+    <input type="checkbox" id="@id" name="@name" value="@boxValue" @(if(value == Some(boxValue)) "checked" else "") @toHtmlArgs(htmlArgs.filterKeys(_ != 'value)) @Html5Templates.toValidation(field)>
+    <span>@args.toMap.get('_text)</span>
+}

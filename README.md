@@ -1,4 +1,4 @@
-# HTML5 input tags module for Play 2
+# HTML5 form tags module for Play 2
 ## for Java and Scala
 
 This module brings client side validation attributes (required, max|min length, ...) and formats (date, number, email, ...) to Play 2 templates.
@@ -15,6 +15,7 @@ Attributes are generated from the constraints defined in the model or in a form 
  * url (validates that it's an url pattern)
  * search (enables special display for this kind of input)
  * password 
+ * select, checkbox, radio buttons
  * custom formats (using regular expression patterns)
 
 ## How to install it
@@ -91,10 +92,12 @@ Telephone number keyboard (on Safari mobile) :
 
 You can use the following tags : 
 
+ * @checkbox
  * @date
  * @email
  * @number
  * @password
+ * @radioGroup
  * @search
  * @select
  * @tel
