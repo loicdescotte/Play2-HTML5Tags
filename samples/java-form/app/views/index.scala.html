@@ -1,6 +1,6 @@
 @(contactForm: Form[Contact])
 
-@import helper._
+@import helper.{form, options}
 @import html5.tags.html._
 
 @main("Form test") {
@@ -9,7 +9,17 @@
 		@text(contactForm("name"), '_label -> "Name : ", 'toto -> "titi")
 	    @text(contactForm("email"), '_label -> "Email : ")
 	    @text(contactForm("age"), '_label -> "Age : ")
+	    @select(
+            contactForm("gender"), 
+            options(
+                "" -> "",
+                "m" -> "Male",
+                "f" -> "Female"
+            ),
+            '_label -> "Gender"
+        )
 	    @password(contactForm("password"), '_label -> "Password : ")
+	    @textarea(contactForm("comments"), '_label -> "Comments : ")
 	    <input type="submit" value="OK">
     }
     

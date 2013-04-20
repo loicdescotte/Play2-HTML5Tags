@@ -24,4 +24,10 @@ public class Contact {
     @Pattern("[0-9]{4}")
     public String password;
 
+    @Required
+    public String gender;
+
+    @Required
+    public String comments;
+
 }
