@@ -2,21 +2,9 @@
 ## for Java and Scala
 
 This module brings client side validation attributes (required, max|min length, ...) and formats (date, number, email, ...) to Play 2.1 templates.
+The provided tags can also display forms with special input controls, like a numeric keypad to enter numbers on a smartphone, a calendar for date selection and so on.
 
-The provided tags can also display forms with special input controls, like a numeric keypad to enter numbers on a smartphone.
-
-Attributes are generated from the constraints defined in the model or in a form mapping. They can generate several kinds of input : 
-
- * text
- * email (validates that it's an email pattern)
- * tel (enables numeric keypad on mobile)
- * number (enables numeric keyboard on mobile, and specific input on other browsers) 
- * date (enables date selection - through a calendar on compatible browsers)
- * url (validates that it's an url pattern)
- * search (enables special display for this kind of input)
- * password 
- * select, checkbox, radio buttons
- * custom formats (using regular expression patterns)
+Attributes are generated from the constraints defined in the model or in a form mapping. 
 
 ## How to install it
 
@@ -74,8 +62,6 @@ The generated output will be :
 Then the browser will check that the `name` field is not empty and the `age` input is a number, before sending to server. 
 It will also limit the length of the `name` input.
 
-Note : you can check browsers compatibility for this new attributes on [wufoo] (http://wufoo.com/html5/).
-
 ## A few examples with pictures
 
 Email validation :
@@ -110,7 +96,9 @@ And the following constraint values on models/mappings :
  * minLength
  * max
  * min
- * pattern
+ * pattern (regular expressions)
+
+Note : you can check features and browsers compatibility for this new attributes on [wufoo] (http://wufoo.com/html5/).
 
 ## Magic tag
 
@@ -137,12 +125,12 @@ The same trick is working with `number` input type if you use max/min constraint
   
 ### MinLength behavior
 
-  As `minLength` does not exist in HTML5 specification, a regular expression pattern will be used to simulate it. 
-  If you need both 'minLength' and 'pattern' on a field, write the min length constraint directly in your regex pattern. Example : add `{2,}` to your pattern for minLength=2.
+As `minLength` does not exist in HTML5 specification, a regular expression pattern will be used to simulate it. 
+If you need both 'minLength' and 'pattern' on a field, write the min length constraint directly in your regex pattern. Example : add `{2,}` to your pattern for minLength=2.
 
 ### Browser regex patterns
 
-  You can check pattern compatibility with Javascript regular expressions (used by browsers) on [regexpal] (http://regexpal.com/) (check the 'Dot matches all' option).
+You can check pattern compatibility with Javascript regular expressions (used by browsers) on [regexpal] (http://regexpal.com/) (check the 'Dot matches all' option).
 
 ## License
 
