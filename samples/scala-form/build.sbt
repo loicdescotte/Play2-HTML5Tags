@@ -6,7 +6,7 @@ libraryDependencies ++= Seq(
   jdbc,
   anorm,
   cache,
-  "com.loicdescotte.coffeebean" % "html5tags_2.10" % "1.1.1-SNAPSHOT"
+  "com.loicdescotte.coffeebean" % "html5tags_2.10" % "1.1.1"
 )     
 
 resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.io/releases/"))(Resolver.ivyStylePatterns)
