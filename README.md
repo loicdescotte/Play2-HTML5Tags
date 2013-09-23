@@ -1,14 +1,29 @@
-# HTML5 form tags module for Play 2
+# HTML5 form tags module for Play Framework
 ## for Java and Scala
 
-This module brings client side validation attributes (required, max|min length, ...) and formats support (date, number, email, ...) to Play 2.1 templates.
+This module brings client side validation attributes (required, max|min length, ...) and formats support (date, number, email, ...) to Play templates.
 The provided tags can also display forms with special input controls, like a numeric keypad to enter numbers on a smartphone, a calendar for date selection and so on.
 
 Attributes are generated from the constraints defined in the model or in a form mapping. 
 
+## Compatibility
+
+This module is compatible with Play 2.1 and 2.2.
+
 ## How to install it
 
-In your application, add this configuration to the `project/Build.scala` file :
+In your application, add this configuration to the `build.sbt` file :
+
+```scala
+libraryDependencies ++= Seq(
+  //your dependencies
+  "com.loicdescotte.coffeebean" % "html5tags_2.10" % "1.1.1"
+)
+
+resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.io/releases/"))(Resolver.ivyStylePatterns)
+```
+
+N.B : for Play 2.1 applications, add this to the `project/Build.scala` file :
 
 ```scala
 val appDependencies = Seq(
