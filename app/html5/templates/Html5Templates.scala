@@ -1,6 +1,6 @@
 package html5.templates
 
-import play.api.templates._
+import play.twirl.api._
 import java.util._
 import scala.util.matching.Regex
 
