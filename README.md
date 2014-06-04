@@ -17,7 +17,7 @@ In your application, add this configuration to the `build.sbt` file :
 ```scala
 libraryDependencies ++= Seq(
   //your dependencies
-  "com.loicdescotte.coffeebean" % "html5tags_2.10" % "1.1.1"
+  "com.loicdescotte.coffeebean" % "html5tags_2.11" % "1.2.0"
 )
 
 resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.io/releases/"))(Resolver.ivyStylePatterns)
@@ -37,6 +37,18 @@ val main = play.Project(appName, appVersion, appDependencies).settings(
 )
 ```
   
+
+# Versioning
+
+This plugin supports several different versions of Play and Scala.
+
+| Plugin version  | Play version       | Scala version |
+|-----------------|--------------------|---------------|
+| 1.1.0           | 2.1.x              | 2.10.x        |
+| 1.1.1           | 2.2.x              | 2.10.x        |
+| 1.1.2           | 2.3.x              | 2.10.x        |
+| 1.2.0           | 2.3.x              | 2.11.x        |
+
 ## Code examples
 
 With this view template : 
