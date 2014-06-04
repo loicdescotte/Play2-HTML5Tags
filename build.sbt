@@ -1,6 +1,8 @@
 name := "html5Tags"
 
-version := "1.1.2"
+version := "1.2.0"
+
+scalaVersion := "2.11.1"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 

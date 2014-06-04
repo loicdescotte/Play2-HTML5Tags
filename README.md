@@ -32,7 +32,7 @@ This plugin supports several different versions of Play and Scala.
 | 1.1.0               | 2.1.x              | 2.10.x        |
 | 1.1.1               | 2.2.x              | 2.10.x        |
 | 1.1.2               | 2.3.x              | 2.10.x        |
-| 1.2.0 (coming soon) | 2.3.x              | 2.11.x        |
+| 1.2.0               | 2.3.x              | 2.11.x        |
 
 ## Code examples
 
