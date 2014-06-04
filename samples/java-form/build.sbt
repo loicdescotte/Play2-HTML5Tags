@@ -2,8 +2,10 @@ name := "java-form"
 
 version := "1.0-SNAPSHOT"
 
+scalaVersion := "2.11.1"
+
 libraryDependencies ++= Seq(
-  //"com.loicdescotte.coffeebean" % "html5tags_2.10" % "1.1.2"
+  //"com.loicdescotte.coffeebean" %% "html5tags" % "1.2.0"
 )     
 
 lazy val lib = RootProject(file("../.."))
