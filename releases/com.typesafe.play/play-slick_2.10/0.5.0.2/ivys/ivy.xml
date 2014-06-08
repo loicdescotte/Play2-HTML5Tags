@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="com.typesafe.play" module="play-slick_2.10" revision="0.5.0.2" status="release" publication="20130912084302">
+		<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+		<description homepage="https://github.com/freekh/play-slick">
+		play-slick
+		</description>
+	</info>
+	<configurations>
+		<conf name="compile" visibility="public" description=""/>
+		<conf name="runtime" visibility="public" description="" extends="compile"/>
+		<conf name="test" visibility="public" description="" extends="runtime"/>
+		<conf name="provided" visibility="public" description=""/>
+		<conf name="optional" visibility="public" description=""/>
+		
+		
+		
+		
+		<conf name="sources" visibility="public" description=""/>
+		<conf name="docs" visibility="public" description=""/>
+		<conf name="pom" visibility="public" description=""/>
+	</configurations>
+	<publications>
+		<artifact name="play-slick_2.10" type="pom" ext="pom" conf="pom"/>
+		<artifact name="play-slick_2.10" type="jar" ext="jar" conf="compile"/>
+		<artifact name="play-slick_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		<artifact name="play-slick_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+	</publications>
+	<dependencies>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.10.2" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play_2.10" rev="2.2.0-M2" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-jdbc_2.10" rev="2.2.0-M2" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.slick" name="slick_2.10" rev="1.0.1" conf="compile->default(compile)"/>
+		<dependency org="javax.servlet" name="javax.servlet-api" rev="3.0.1" conf="compile->default(compile)"/>
+		<dependency org="com.google.code.findbugs" name="jsr305" rev="2.0.1" conf="compile->default(compile)"/>
+		<dependency org="org.reflections" name="reflections" rev="0.9.8" transitive="false" conf="compile->default(compile)">
+			<exclude org="com.google.guava" module="guava" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="javassist" module="javassist" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.typesafe.play" name="play-test_2.10" rev="2.2.0-M2" conf="test->default(compile)"/>
+		<exclude org="org.scala-lang" module="scala-library" artifact="*" type="jar" ext="*" matcher="exact"/>
+		<exclude org="org.scala-lang" module="scala-compiler" artifact="*" type="jar" ext="*" matcher="exact"/>
+		<override org="org.scala-lang" module="scala-library" matcher="exact" rev="2.10.2"/>
+		<override org="org.scala-lang" module="scala-compiler" matcher="exact" rev="2.10.2"/>
+	</dependencies>
+</ivy-module>
