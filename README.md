@@ -20,7 +20,7 @@ libraryDependencies ++= Seq(
   "com.loicdescotte.coffeebean" %% "html5tags" % "1.2.0"
 )
 
-resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.io/releases/"))(Resolver.ivyStylePatterns)
+resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.io/Play2-HTML5Tags/releases/"))(Resolver.ivyStylePatterns)
 ```
 
 # Versioning
