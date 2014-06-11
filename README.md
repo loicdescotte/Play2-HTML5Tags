@@ -25,9 +25,9 @@ resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.
 
 # Versioning
 
-This plugin supports several versions of Play and Scala.
+This module supports several versions of Play and Scala.
 
-| Plugin version      | Play version       | Scala version         |
+| Module version      | Play version       | Scala version         |
 |---------------------|--------------------|-----------------------|
 | 1.1.0               | 2.1.x              | 2.10.x                |
 | 1.1.1               | 2.2.x              | 2.10.x                |
