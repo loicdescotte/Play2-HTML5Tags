@@ -17,7 +17,7 @@ In your application, add this configuration to the `build.sbt` file :
 ```scala
 libraryDependencies ++= Seq(
   //your dependencies
-  "com.loicdescotte.coffeebean" %% "html5tags" % "1.2.0"
+  "com.loicdescotte.coffeebean" %% "html5tags" % "1.2.1"
 )
 
 resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.io/Play2-HTML5Tags/releases/"))(Resolver.ivyStylePatterns)
@@ -31,7 +31,7 @@ This module supports several versions of Play and Scala.
 |---------------------|--------------------|-----------------------|
 | 1.1.0               | 2.1.x              | 2.10.x                |
 | 1.1.1               | 2.2.x              | 2.10.x                |
-| 1.2.0               | 2.3.x              | 2.11.x, 2.10.x        |
+| 1.2.1               | 2.3.x              | 2.11.x, 2.10.x        |
 
 ## Code examples
 
