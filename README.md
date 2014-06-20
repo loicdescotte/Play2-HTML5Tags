@@ -98,8 +98,8 @@ You can use the following tags :
  * @tel
  * @text
  * @textarea
- * @url
  * @file
+ * @url
 
 And the following constraint values on models/mappings :
 
