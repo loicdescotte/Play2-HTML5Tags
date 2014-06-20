@@ -21,7 +21,8 @@ object Application extends Controller {
       "age" -> number(min=18, max=99),
       "password" -> (nonEmptyText verifying pattern("""[0-9]{4}""".r)),
       "gender" -> nonEmptyText,
-      "comments" -> nonEmptyText
+      "comments" -> nonEmptyText,
+      "inputFile" -> nonEmptyText
     )(Contact.apply)(Contact.unapply)
   )
 

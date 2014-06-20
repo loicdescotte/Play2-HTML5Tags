@@ -99,6 +99,7 @@ You can use the following tags :
  * @text
  * @textarea
  * @url
+ * @file
 
 And the following constraint values on models/mappings :
 
@@ -131,19 +132,6 @@ The generated output will be :
 And the browser will check that the field contains an email address.
 
 The same trick is working with `number` input type if you use max/min constraints.
-
-## Compatibility with standard Play tags
-
-You don't need to import Play template helper to use Html5 tags.
-However, you can mix standard Play tags with Html5 tags : 
-
-```scala
-@import html5.tags.html._
-
-@text(form("name"), 'label -> "Your name : ")
-@number(form("age"), 'label -> "Your age : ")
-@helper.inputFile(form("inputFile"), 'label -> "Upload : ")
-```
 
 ## Important notes
   
