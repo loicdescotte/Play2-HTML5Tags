@@ -2,7 +2,7 @@ name := "html5Tags"
 
 version := "1.2.1"
 
-scalaVersion := "2.10.4"
+scalaVersion := "2.11.1"
 
 lazy val root = (project in file(".")).enablePlugins(SbtTwirl)
 
