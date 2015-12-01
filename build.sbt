@@ -15,6 +15,8 @@ libraryDependencies ++= Seq(
 	specs2 % Test
 )
 
+resolvers += "scalaz-bintray" at "https://dl.bintray.com/scalaz/releases"
+
 // Automatically import PlayMagic
 TwirlKeys . templateImports += "play.api.templates.PlayMagic._"
 
