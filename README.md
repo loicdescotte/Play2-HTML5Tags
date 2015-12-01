@@ -6,6 +6,8 @@ The provided tags can also display forms with special input controls, like a num
 
 Attributes are generated from the constraints defined in the model or in a form mapping.
 
+[![Travis](https://travis-ci.org/loicdescotte/Play2-HTML5Tags.svg)](https://travis-ci.org/loicdescotte/Play2-HTML5Tags)
+
 ## Compatibility
 
 This module is compatible with Play >= 2.1.
