@@ -10,13 +10,15 @@ import views._
 
 import play.api.data.validation._
 import play.api.data.validation.Constraints._
+import play.api.i18n.{MessagesApi, I18nSupport}
+import javax.inject.Inject
 
 
-object Application extends Controller {  
+class Application @Inject() (val messagesApi: MessagesApi) extends Controller with I18nSupport {
 
   val contactForm = Form(
-    mapping(      
-      "name" -> nonEmptyText(minLength=2, maxLength=10),      
+    mapping(
+      "name" -> nonEmptyText(minLength=2, maxLength=10),
       "email" -> (email verifying nonEmpty),
       "age" -> number(min=18, max=99),
       "password" -> (nonEmptyText verifying pattern("""[0-9]{4}""".r)),
@@ -31,7 +33,7 @@ object Application extends Controller {
   }
 
   def save = Action {
-    Redirect( routes.Application.index() )    
+    Redirect( routes.Application.index() )
   }
-  
+
 }

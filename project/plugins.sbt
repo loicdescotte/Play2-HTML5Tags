@@ -4,4 +4,4 @@ logLevel := Level.Warn
 // The Typesafe repository
 resolvers += "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/"
 
-addSbtPlugin ( "com.typesafe.sbt" % "sbt-twirl" % "1.0.2" ) 
+addSbtPlugin ( "com.typesafe.sbt" % "sbt-twirl" % "1.1.1" ) 

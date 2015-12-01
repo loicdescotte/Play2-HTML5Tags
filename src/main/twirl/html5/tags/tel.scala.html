@@ -2,7 +2,7 @@
  * Generate an HTML input tel field with HTML5 validation attributes
  * The validation attributes are generated from the constraints defined on the model
  *@
-@(field: play.api.data.Field, args: (Symbol,Any)*)(implicit handler: views.html.helper.FieldConstructor, lang: play.api.i18n.Lang)
+@(field: play.api.data.Field, args: (Symbol,Any)*)(implicit handler: views.html.helper.FieldConstructor, lang: play.api.i18n.Lang, messages: play.api.i18n.Messages)
 
 @import html5.templates._
 @import views.html.helper._

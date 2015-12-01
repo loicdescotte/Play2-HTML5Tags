@@ -1,15 +1,15 @@
-@(contactForm: Form[Contact])
+@(contactForm: Form[Contact])(implicit messages: play.api.i18n.Messages)
 
 @import html5.tags.html._
 
 @main("Form test") {
 
-     @form(routes.Application.save()) {      
+     @form(routes.Application.save()) {
 	    @text(contactForm("name"), '_label -> "Name : ", 'toto -> "titi")
 	    @text(contactForm("email"), '_label -> "Email : ")
 	    @text(contactForm("age"), '_label -> "Age : ")
 	    @select(
-            contactForm("gender"), 
+            contactForm("gender"),
             options(
                 "" -> "",
                 "m" -> "Male",
@@ -22,5 +22,5 @@
 	    @textarea(contactForm("comments"), '_label -> "Comments : ")
 	    <input type="submit" value="OK">
     }
-    
+
 }
