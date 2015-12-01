@@ -32,7 +32,7 @@ This module supports several versions of Play and Scala.
 | 1.1.0               | 2.1.x              | 2.10.x                |
 | 1.1.1               | 2.2.x              | 2.10.x                |
 | 1.2.1               | 2.3.x              | 2.11.x, 2.10.x        |
-| 1.2.2               | 2.4.x              | 2.11.x, 2.10.x        |
+| 1.2.2-SNAPSHOT      | 2.4.x              | 2.11.x, 2.10.x        |
 
 ## Code examples
 
