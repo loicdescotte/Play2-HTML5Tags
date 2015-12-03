@@ -19,7 +19,7 @@ In your application, add this configuration to the `build.sbt` file :
 ```scala
 libraryDependencies ++= Seq(
   //your dependencies
-  "com.loicdescotte.coffeebean" %% "html5tags" % "1.2.1"
+  "com.loicdescotte.coffeebean" %% "html5tags" % "1.2.2"
 )
 
 resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.io/Play2-HTML5Tags/releases/"))(Resolver.ivyStylePatterns)
