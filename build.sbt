@@ -1,6 +1,6 @@
 name := "html5Tags"
 
-version := "1.2.2-SNAPSHOT"
+version := "1.2.3-SNAPSHOT"
 
 scalaVersion in ThisBuild := "2.11.7"
 
