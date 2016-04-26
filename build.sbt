@@ -1,4 +1,4 @@
-name := "html5Tags"
+name := "testRelease"
 
 version := "1.2.2-SNAPSHOT"
 

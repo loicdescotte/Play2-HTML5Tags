@@ -9,6 +9,4 @@ libraryDependencies ++= Seq(
   specs2 % Test
 )
 
-val main = Project(id = "application", base = file(".")).enablePlugins(PlayJava)
-
 resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.io/Play2-HTML5Tags/releases/"))(Resolver.ivyStylePatterns)

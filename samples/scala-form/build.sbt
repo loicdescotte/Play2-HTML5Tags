@@ -10,8 +10,6 @@ libraryDependencies ++= Seq(
 )
 
 
-val main = Project(id = "application", base = file(".")).enablePlugins(PlayScala)
-
 resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.io/Play2-HTML5Tags/releases/"))(Resolver.ivyStylePatterns)
 
 resolvers += "scalaz-bintray" at "https://dl.bintray.com/scalaz/releases"
