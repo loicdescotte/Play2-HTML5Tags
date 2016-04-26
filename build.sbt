@@ -17,9 +17,6 @@ libraryDependencies ++= Seq(
 
 resolvers += "scalaz-bintray" at "https://dl.bintray.com/scalaz/releases"
 
-// Automatically import PlayMagic
-TwirlKeys . templateImports += "play.api.templates.PlayMagic._"
-
 organization := "com.loicdescotte.coffeebean"
 
 routesGenerator := InjectedRoutesGenerator

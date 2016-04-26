@@ -5,7 +5,7 @@ version := "1.0-SNAPSHOT"
 scalaVersion := "2.11.7"
 
 libraryDependencies ++= Seq(
-  "com.loicdescotte.coffeebean" %% "html5tags" % "1.2.2",
+  "com.loicdescotte.coffeebean" %% "html5tags" % "1.2.2",  
   specs2 % Test
 )
 
