@@ -10,3 +10,5 @@ libraryDependencies ++= Seq(
 )
 
 resolvers += Resolver.url("github repo for html5tags", url("http://loicdescotte.github.io/Play2-HTML5Tags/releases/"))(Resolver.ivyStylePatterns)
+
+routesGenerator := StaticRoutesGenerator

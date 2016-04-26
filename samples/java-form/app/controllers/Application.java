@@ -11,7 +11,7 @@ import models.*;
 public class Application extends Controller {
 
     final static Form<Contact> contactForm = form(Contact.class);
-  
+
     public static Result index() {
         return ok(index.render(contactForm));
     }
@@ -19,5 +19,5 @@ public class Application extends Controller {
     public static Result save() {
         return redirect( "/" );
     }
-  
+
 }
