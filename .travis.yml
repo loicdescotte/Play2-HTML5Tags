@@ -1,0 +1,9 @@
+language: scala
+jdk:
+  - oraclejdk8
+scala:
+   - 2.11.8
+script:
+   - sbt ++$TRAVIS_SCALA_VERSION clean test
+   - sbt ++$TRAVIS_SCALA_VERSION scalaForm/clean scalaForm/test
+   - sbt ++$TRAVIS_SCALA_VERSION javaForm/clean javaForm/test
